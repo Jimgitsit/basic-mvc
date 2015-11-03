@@ -1,0 +1,11 @@
+default:
+  method: "GET"
+  route: "/"
+  controller: "BasePage"
+  action: "defaultAction"
+  
+sample_page:
+  method: "GET|POST"
+  route: "/samplepage"
+  controller: "SamplePage"
+  action: "sampleAction"

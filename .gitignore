@@ -1,0 +1,5 @@
+.idea
+app/cache/*
+app/config/site-config.php
+composer.phar
+vendor/

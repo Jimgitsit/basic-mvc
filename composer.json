@@ -1,0 +1,19 @@
+{
+  "name": "jim/alacarte-front",
+  "authors": [
+    {
+      "name": "Jim McGowen",
+      "email": "jim@getbluetree.com"
+    }
+  ],
+  "require": {
+    "twig/twig": "^1.23",
+    "altorouter/altorouter": "1.1.0",
+    "symfony/yaml": "^2.7"
+  },
+  "autoload": {
+    "classmap": [
+      "app/controllers"
+    ]
+  }
+}
