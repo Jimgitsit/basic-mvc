@@ -7,7 +7,16 @@ class BasePage {
 	 * @var Twig_Environment $twig
 	 */
 	protected $twig;
+
+	/**
+	 * @var array A convenient (and consistent) storage for twig variables. This is used if the second parameter of renderTwig in null or omitted.
+	 */
 	protected $twigVars = array();
+
+	/**
+	 * @var Doctrine\ODM\MongoDB\DocumentManager Initialized during construction.
+	 */
+	protected $dm;
 
 	/**
 	 * Constructor
@@ -15,6 +24,7 @@ class BasePage {
 	public function __construct() {
 		session_start();
 		$this->initTwig();
+		$this->dm = MyMongoDB::connect();
 	}
 	
 	public function defaultAction() {
@@ -36,7 +46,11 @@ class BasePage {
 		$this->twig = new Twig_Environment($loader, $twigConfig);
 	}
 
-	protected function renderTwig($template, $vars) {
+	protected function renderTwig($template, $vars = null) {
+		if ($vars == null) {
+			$vars = $this->twigVars;
+		}
+		
 		$vars['alerts'] = $this->getAlerts();
 
 		if (!empty($this->post)) {
