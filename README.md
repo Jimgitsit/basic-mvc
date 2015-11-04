@@ -1,6 +1,6 @@
 # basic-mvc
 ```
-Basic site framework with composer, alto-router, and twig
+Basic site framework with composer, alto-router, twig, and doctrine mongodb
 
 Copy the following into your new project directory:
 app/
