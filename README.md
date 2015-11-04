@@ -16,6 +16,9 @@ Run:
 $ ./composer.phar self-update
 $ ./composer.phar install
 
+Move the file config.php (in the project root dir) to vendor/doctrine/mongodb-odm/tools/sandbox.
+This allows the mongodb command line interface to work (see handy_console_commands.txt).
+
 Configure web server docroot to point to public/ directory.
 Example:
 <VirtualHost *:8080>
