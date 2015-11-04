@@ -7,3 +7,7 @@ define('BASE_PATH', dirname(dirname(dirname(__FILE__))));
 /** Twig */
 define('TWIG_CACHE_DIR', BASE_PATH . '/app/cache/twig');
 define('TWIG_TEMPLATE_DIR', BASE_PATH . '/app/views');
+
+/*** MongoDB ***/
+define('MONGO_DB_HOST', 'localhost');
+define('MONGO_DB_NAME', 'my_db');

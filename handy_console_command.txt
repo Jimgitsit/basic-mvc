@@ -1,0 +1,11 @@
+*** Generate getter and setters for Documents ***
+./mongodb odm:generate:documents app/models
+
+*** Create or update the database from annotations (Note: this does not change existing documents) ***
+./mongodb odm:schema:create
+
+*** Clear the doctrine cache ... this is now erroring with "No Metadata cache driver is configured on given DocumentManager." for some reason. ***
+./mongodb odm:clear-cache:metadata
+
+
+

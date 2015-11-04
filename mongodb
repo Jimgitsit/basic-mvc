@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+require_once 'app/config/site-config.php';
+require_once 'vendor/doctrine/mongodb-odm/tools/sandbox/mongodb.php';
